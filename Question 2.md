@@ -43,7 +43,7 @@ Arr:9 8 3 -7 3 9
 -21
 ___
 ## Solution
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 int fun(int * arr, int n){

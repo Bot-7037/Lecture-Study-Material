@@ -36,7 +36,7 @@ m:20
     - 19
 ___
 ## Solution
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 int main()

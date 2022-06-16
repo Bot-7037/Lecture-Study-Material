@@ -27,7 +27,7 @@ arr: 2 8 3 5 7 4 1 2
 4
 ___
 ## Explanation
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 int main()
