@@ -34,44 +34,32 @@ int largeSmallSum(int *array, int n)
     int even[n], odd[n];
     int evencount = 0, oddcount = 0;
     if(n<=3)
-    {
         answer = 0;
-    }
-    else
-    {
+    else{
         even[0] = array[0];
         evencount = 1;
-        for(i=1; i<n; i++)
-        {
-            if(i%2==0)
-            {
+        for(i=1; i<n; i++){
+            if(i%2==0){
                 even[evencount] = array[i];
                 evencount++;
             }
-            else
-            {
+            else{
                 odd[oddcount] = array[i];
                 oddcount++;
             }  
         }
-        for(i=0; i<evencount; i++)
-        {
-            for(j=i+1; j<evencount; j++)
-            {
-                if(even[i]>even[j])
-                {
+        for(i=0; i<evencount; i++){
+            for(j=i+1; j<evencount; j++){
+                if(even[i]>even[j]){
                     temp = even[i];
                     even[i] = even[j];
                     even[j] = temp;
                 }
             }
         }
-        for(i=0; i<oddcount; i++)
-        {
-            for(j=i+1; j<oddcount; j++)
-            {
-                if(odd[i]>odd[j])
-                {
+        for(i=0; i<oddcount; i++){
+            for(j=i+1; j<oddcount; j++){
+                if(odd[i]>odd[j]){
                     temp = odd[i];
                     odd[i] = odd[j];
                     odd[j] = temp;
@@ -96,3 +84,39 @@ int main()
     printf("%d",result);
     return 0;
 }```
+
+## Solution 2
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    int arr(n);
+    for(int i=0; i<n; i++)
+        cin>>arr[i];
+    int a=max(arr[0], arr[2]), b = min(arr[0], arr[2]);
+    int x=max(arr[1], arr[3]), b = min(arr[1], arr[3]);
+    for(int i=4; i<n; i++){
+        if(i%2){
+            if(arr[i]>a){
+                b = a;
+                a = arr[i]
+            }
+            else if(arr[i] <a && arr[i]>=b){
+                b = arr[i];
+            }
+        }
+        else{
+            if(arr[i]>x){
+                y = x;
+                x = arr[i]
+            }
+            else if(arr[i] < x && arr[i]>=y){
+                y = arr[i];
+            }
+        }
+    }
+    return b+y;
+}
+```
