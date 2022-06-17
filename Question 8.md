@@ -77,4 +77,5 @@ int main ()
   cout << decitoNBase(n, num);
    
   return 0;
-}```
+}
+```

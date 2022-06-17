@@ -70,4 +70,5 @@ int main ()
   cout << FinndAutoCount (n);
    
   return 0;
-}```
+}
+```

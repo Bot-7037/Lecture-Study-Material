@@ -43,4 +43,3 @@ int main() {
     cout << findCount(n, arr, num, diff);
 }
 ```
-

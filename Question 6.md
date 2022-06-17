@@ -83,7 +83,8 @@ int main()
     result = largeSmallSum(array, n);
     printf("%d",result);
     return 0;
-}```
+}
+```
 
 ## Solution 2
 
