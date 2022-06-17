@@ -1,7 +1,7 @@
 ## Question
 ___
 You are given a function.
-int CheckPassword(char str[], int n);
+`int CheckPassword(char str[], int n);`
 The function accepts string str of size n as an argument. Implement the function which returns 1 if given string str is valid password else 0.
 str is a valid password if it satisfies the below conditions.
 
